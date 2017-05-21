@@ -1,0 +1,68 @@
+<ion-view view-title="YGS Puan Hesaplama">
+  <ion-content>
+
+  <div class="list">
+
+  <div class="item range">Mat {{mat}}
+  <i class="ion-ios-plus-empty"></i>
+  <input type="range" name="mat" ng-model="mat" ng-change="net(mat,fen,sos,tur)" min="0" max="40">
+  <i class="ion-plus-round"></i>
+</div>
+
+	<div class="item range">Fen {{fen}}
+  <i class="ion-ios-plus-empty"></i>
+  <input type="range" name="fen" ng-model="fen" ng-change="net(mat,fen,sos,tur)" min="0" max="40">
+  <i class="ion-plus-round"></i>
+</div>
+
+	<div class="item range">Sos {{sos}}
+  <i class="ion-ios-plus-empty"></i>
+  <input type="range" name="sos" ng-model="sos" ng-change="net(mat,fen,sos,tur)" min="0" max="40">
+  <i class="ion-plus-round"></i>
+</div>
+
+	<div class="item range">Türk {{tur}}
+  <i class="ion-ios-plus-empty"></i>
+  <input type="range" name="tur" ng-model="tur" ng-change="net(mat,fen,sos,tur)" min="0" max="40">
+  <i class="ion-plus-round"></i>
+</div>
+
+	<div class="card">
+  <div class="item item-text-wrap" style="height: 44px; width:{{w1}}%; transition: width 0.1s; background: #ddd;">
+  	<span style="position: fixed; font-size: 15px; color: #666666;">
+    YGS-1 Puan : {{ygs1}}</span>
+  </div>
+</div>
+
+	<div class="card">
+  <div class="item item-text-wrap" style="height: 44px; width:{{w2}}%; transition: width 0.1s; background: #ddd;">
+  	<span style="position: fixed; font-size: 15px; color: #666666;">
+    YGS-2 Puan : {{ygs2}}</span>
+  </div>
+</div>
+
+	<div class="card">
+  <div class="item item-text-wrap" style="height: 44px; width:{{w3}}%; transition: width 0.1s; background: #ddd;">
+  	<span style="position: fixed; font-size: 15px; color: #666666;">
+    YGS-3 Puan : {{ygs3}}</span>
+  </div>
+</div>
+
+	<div class="card">
+  <div class="item item-text-wrap" style="height: 44px; width:{{w4}}%; transition: width 0.1s; background: #ddd;">
+  	<span style="position: fixed; font-size: 15px; color: #666666;">
+    YGS-4 Puan : {{ygs4}}</span>
+  </div>
+</div>
+
+	<div class="card">
+  <div class="item item-text-wrap" style="height: 44px; width:{{w5}}%; transition: width 0.1s; background: #ddd;">
+  	<span style="position: fixed; font-size: 15px; color: #666666;">
+    YGS-5 Puan : {{ygs5}}</span>
+  </div>
+</div>
+
+</div>
+
+  </ion-content>
+</ion-view>

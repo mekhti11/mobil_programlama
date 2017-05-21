@@ -1,0 +1,60 @@
+<ion-view view-title="Call Center">
+  <ion-content>
+
+	<button ng-click="user_id ? tikla():login()" class="button button-block button-light">
+  <font color="#388bf5"><i class="icon {{durum==0 ? 'ion-android-favorite-outline' : 'ion-android-favorite'}}"></i> Like {{adet}}</font>
+	</button>
+
+
+  <!--Arama input alanı-->
+
+  <div class="list list-inset">
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="Ne aramak istedin.." ng-model="ara">
+  </label>
+</div>
+
+
+
+
+<!--Açıklama alanı-->
+<div class="card animated wobble" ng-if="ara">
+  <div class="item item-text-wrap" style="background: #{{ara.length>=3 ? 'FFC107' : 'ddd'}}">
+    {{ara.length>=3 ? 'Aradığınız kelime:'+ara:'Lütfen en az 3 karakter giriniz.'}}
+  </div>
+</div>
+
+<!--
+
+	<div class="card" ng-if="ara.length<3 && ara">
+		<div class =="item item-text-wrap">
+			Lütfen en az 3 karakter giriniz.
+		</div>
+	</div>
+
+	<div class="card" ng-if="ara.length>=3">
+		<div class="item item-item-wrap">
+			Aradığınız kelime <bb>{{ara}}</b>
+		</div>
+	</div>
+
+--!>
+
+
+<!--firmalar listeleniyor-->
+
+<div class="list" ng-if="ara.length>=3 || !ara">
+
+    <a class="item item-avatar" ng-repeat="firma in firmalar | filter:ara" href="#/app/playlists/{{firma.id}}">
+      <img src="{{firma.logo}}" class="animated jello">
+      <h2>{{firma.adi}}</h2>
+      <p>{{firma.kategori}}</p>
+    </a>
+
+
+</div>
+
+
+  </ion-content>
+</ion-view>
